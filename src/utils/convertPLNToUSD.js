@@ -1,4 +1,5 @@
 export const convertPLNToUSD = (PLN) => {
+  if (typeof PLN !== 'number' || PLN < 0) return NaN;
 
   const PLNtoUSD = PLN / 3.5;
   
