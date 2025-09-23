@@ -1,6 +1,8 @@
 export const convertUSDToPLN = (USD) => {
-  if (typeof USD !== 'number' || USD < 0) return NaN;
- 
+  if (typeof USD !== 'number' || isNaN(USD) || USD < 0) {
+    return NaN;
+  }
+
   const USDtoPLN = USD * 3.5;
  
   const formatter = new Intl.NumberFormat('en-US', {
